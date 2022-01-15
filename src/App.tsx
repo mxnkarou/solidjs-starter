@@ -1,4 +1,5 @@
 import { render } from 'solid-js/web';
+import type { Component } from 'solid-js';
 import { createSignal } from 'solid-js';
 import { ethers } from 'ethers';
 import Web3Modal from 'web3modal';
@@ -6,7 +7,7 @@ import WalletConnectProvider from '@walletconnect/web3-provider';
 
 import './styles/globals.css';
 
-const App = () => {
+const App: Component = () => {
   const [account, setAccount] = createSignal('');
   const [loggedIn, setLoggedIn] = createSignal(false);
 
@@ -43,9 +44,9 @@ const App = () => {
   return (
     <>
       <button onClick={connect}> Connect Wallet</button>
-      {loggedIn && <h1>Welcome, {account}</h1>}
+      {<h1>Welcome, {account}</h1>}
     </>
   );
 };
 
-render(App, document.getElementById('app'));
+render(() => <App />, document.getElementById('root') as HTMLElement);

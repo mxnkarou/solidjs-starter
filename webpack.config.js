@@ -8,7 +8,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.jsx', '.js', '.json'],
+    extensions: ['.jsx', '.js', '.json', '.ts', '.tsx'],
     fallback: {
       assert: require.resolve('assert'),
       buffer: require.resolve('buffer'),
