@@ -1,1 +1,1 @@
-SolidJS + Webpack 5 + Typescript Template
+# SolidJS + Webpack 5 + Typescript Template
